@@ -1,0 +1,9 @@
+div {
+  margin-top: 20px;
+  width: 250px;
+}
+
+div.button {
+  display: flex;
+  justify-content: space-between;
+}

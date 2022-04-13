@@ -1,0 +1,20 @@
+<div>
+  <button type="button" (click)="onAdd()">新增</button>
+</div>
+
+<ng-container *ngIf="tasks$ | async as tasks; else empty">
+  <app-task
+    *ngFor="let task of tasks; let odd = odd"
+    [class.odd]="odd"
+    [task]="task"
+    (edit)="onEdit($event)"
+  ></app-task>
+  <div class="pager">
+    <button type="button" (click)="onNextPage(-1)">上一頁</button>
+    <button type="button" (click)="onNextPage(1)">下一頁</button>
+  </div>
+</ng-container>
+
+<ng-template #empty>
+  <div class="data-empty">無待辦事項</div>
+</ng-template>

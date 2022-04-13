@@ -1,0 +1,6 @@
+<h3>工作事項表單</h3>
+<div>工作編號：{{ task?.TaskSn }}</div>
+<div>工作事項：<input type="text" [formControl]="formControl" /></div>
+<div class="button">
+  <button type="button" (click)="onCancel()">取消</button>
+</div>

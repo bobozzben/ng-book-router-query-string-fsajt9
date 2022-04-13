@@ -1,0 +1,18 @@
+<nav>
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    首頁
+  </a>
+  <a
+    [routerLink]="['task', 'list']"
+    routerLinkActive="active"
+    [queryParams]="{ pageIdx: 0, pageSize: 5 }"
+  >
+    工作事項
+  </a>
+</nav>
+<hr />
+<router-outlet></router-outlet>
